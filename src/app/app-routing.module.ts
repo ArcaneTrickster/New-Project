@@ -19,11 +19,15 @@ const routes: Routes = [
         component: DashboardComponent,
         data: { title: 'Dashboard', titleI18n: 'dashboard' },
       },
-      // {
-      //   path: 'design',
-      //   loadChildren: () => import('./design/design.module').then(m => m.DesignModule),
-      //   data: { title: 'Design', titleI18n: 'design' },
-      // }, a lazy loading example. Make sure first component is not lazy loaded.
+      {
+        path: 'features',
+        loadChildren: () =>
+          import('./pages/features/features.module').then(
+            (m) => m.FeaturesModule
+          ),
+        data: { title: 'features', titleI18n: 'design' },
+      },
+      //a lazy loading example. Make sure first component is not lazy loaded.
     ],
   },
   {

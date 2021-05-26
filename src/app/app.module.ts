@@ -10,6 +10,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './auth/auth-layout.component';
 import { MaterialModule } from './material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
