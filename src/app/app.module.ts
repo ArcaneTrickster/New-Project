@@ -11,6 +11,7 @@ import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './auth/auth-layout.component';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AuthLayoutComponent,
     AdminLayoutComponent,
     DashboardComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,

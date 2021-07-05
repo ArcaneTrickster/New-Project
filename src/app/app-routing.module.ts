@@ -5,12 +5,13 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegistrationComponent } from './auth/registration/registration.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './auth/auth-layout.component';
+import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   {
     path: '',
     component: AdminLayoutComponent,
-    //canActivate: [AuthGuard],
+    //canActivate: [AuthGuard], ---these 2 commented lines are suppose to redirect to login page if user login not in the app.
     //canActivateChild: [AuthGuard],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -47,7 +48,11 @@ const routes: Routes = [
       },
     ],
   },
-  { path: '**', redirectTo: 'dashboard' },
+  {
+    path: '**',
+    component: PagenotfoundComponent,
+    data: { title: 'notfound', titleI18n: 'notfound' },
+  },
 ];
 
 @NgModule({
