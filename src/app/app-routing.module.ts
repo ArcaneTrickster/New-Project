@@ -7,6 +7,10 @@ import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './auth/auth-layout.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 
+//your app.module.ts must import AppRoutingModule class which is in this file.
+//below is a routes variable of type Routes.
+//every app.module.ts which has a AppRoutingModule must provide <router-outlet></router-outlet> in its app.component.html.
+// and if a component has children routes then it aslo has to provide a <router-outlet></router-outlet> for children routes.
 const routes: Routes = [
   {
     path: '',
@@ -28,7 +32,7 @@ const routes: Routes = [
           ),
         data: { title: 'features', titleI18n: 'design' },
       },
-      //a lazy loading example. Make sure first component is not lazy loaded.
+      //above route(feature) is a lazy loading example. Make sure first component is not lazy loaded i.e. AdminLayoutComponent.
     ],
   },
   {
@@ -54,7 +58,8 @@ const routes: Routes = [
     data: { title: 'notfound', titleI18n: 'notfound' },
   },
 ];
-
+//you make a simple class a module by giving it @NgModule decorator.below decorator imports RouterModule to gain its properties,
+// and set a root route to routes variable. exports allow the functionality to provide usage of imported classes to outside uses by the name of AppRoutingModule.
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

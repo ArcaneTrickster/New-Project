@@ -1,0 +1,10 @@
+things we need:-
+1) nodejs from website https://nodejs.org/en/.
+2) git bash terminal from https://git-scm.com/downloads. (optional)
+3) In your terminal type `npm install -g @angular/cli`. to globally install angular cli.
+4) you also need an editor like vscode, you can download from https://code.visualstudio.com. vs code can have a lot of plugins along side. some of them i use are tslint, eslint, angular files, angular language service, angular snippets.
+
+* to create an app type `ng new <AppName>` in your terminal to create a new app.
+* to run an app type `ng serve`. it will serve your app at localhost/4200
+* in case you download a code from github or any other place you run a command `npm install` to add a node_modules folder into your project folder, without it app will not work.
+* if you have an angular project which you do not open/work on very often then you can delete node_modules folder to reduce project size on your disk.you can always bring it by `npm install`.
